@@ -11,15 +11,19 @@ struct TravelRecordScreen: View {
    @ObservedObject var viewModel = TravelRecordViewModel()
 
     var body: some View {
-        VStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    ForEach(viewModel.prefectures) { prefecture in
-                        PrefectureNameView(prefecture: prefecture)
-                            .padding(.horizontal, 16)
+        NavigationView {
+            VStack {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        ForEach(viewModel.prefectures) { prefecture in
+                            PrefectureNameView(prefecture: prefecture)
+                                .padding(.horizontal, 16)
+                        }
                     }
                 }
             }
+            .navigationTitle("行ったことのある都道府県はどこ？")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
