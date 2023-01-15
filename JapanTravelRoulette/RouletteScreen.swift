@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct RouletteScreen: View {
+    @ObservedObject var viewModel = RouletteScreenViewModel()
+
     var body: some View {
         VStack {
-            Button(action: {}) {
+            Button(action: {
+                viewModel.startRoulette()
+            }) {
                  Text("スタート")
             }
             Text("ルーレットを回した結果")

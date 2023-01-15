@@ -19,6 +19,7 @@
 		D49D20102974291A0050EA60 /* PrefectureNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D200F2974291A0050EA60 /* PrefectureNameView.swift */; };
 		D49D2012297429620050EA60 /* TravelRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D2011297429620050EA60 /* TravelRecordViewModel.swift */; };
 		D49D2014297429A40050EA60 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D2013297429A40050EA60 /* Prefecture.swift */; };
+		D49D20162974B6500050EA60 /* RouletteScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D49D200F2974291A0050EA60 /* PrefectureNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureNameView.swift; sourceTree = "<group>"; };
 		D49D2011297429620050EA60 /* TravelRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRecordViewModel.swift; sourceTree = "<group>"; };
 		D49D2013297429A40050EA60 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
+		D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +111,11 @@
 				D49D1FE1297425290050EA60 /* JapanTravelRouletteApp.swift */,
 				D49D1FE3297425290050EA60 /* ContentView.swift */,
 				D49D200D297427A10050EA60 /* TravelRecordScreen.swift */,
+				D49D200B297427450050EA60 /* RouletteScreen.swift */,
+				D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */,
 				D49D200F2974291A0050EA60 /* PrefectureNameView.swift */,
 				D49D1FE52974252C0050EA60 /* Assets.xcassets */,
 				D49D1FE72974252C0050EA60 /* Preview Content */,
-				D49D200B297427450050EA60 /* RouletteScreen.swift */,
 			);
 			path = JapanTravelRoulette;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49D20162974B6500050EA60 /* RouletteScreenViewModel.swift in Sources */,
 				D49D2014297429A40050EA60 /* Prefecture.swift in Sources */,
 				D49D200E297427A10050EA60 /* TravelRecordScreen.swift in Sources */,
 				D49D2012297429620050EA60 /* TravelRecordViewModel.swift in Sources */,
