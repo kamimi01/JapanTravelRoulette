@@ -7,8 +7,14 @@
 
 import Foundation
 
+enum RouletteStatus {
+    case notRolling
+    case rolling
+    case endRolling
+}
+
 class RouletteScreenViewModel: ObservableObject {
-    @Published var isStoppedRoulette = false
+    @Published var rouletteStatus = RouletteStatus.notRolling
     @Published var selectedPrefecture: Prefecture? = nil
 
     func startRoulette() {

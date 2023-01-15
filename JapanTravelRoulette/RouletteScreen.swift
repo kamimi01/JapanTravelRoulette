@@ -17,11 +17,14 @@ struct RouletteScreen: View {
             }) {
                  Text("スタート")
             }
-            if viewModel.isStoppedRoulette {
-                Text(viewModel.selectedPrefecture?.rawValue ?? "ルーレットを回してね")
-            } else {
+            switch viewModel.rouletteStatus {
+            case .notRolling:
+                Text("ルーレットを回してね")
+            case .rolling:
                 LottieView(animationType: .oneTwoThree)
                     .frame(width: 100, height: 100)
+            case .endRolling:
+                Text("岩手県")
             }
             HStack {
                 Image("")
