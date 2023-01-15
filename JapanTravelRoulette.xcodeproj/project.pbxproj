@@ -14,6 +14,11 @@
 		D49D1FF32974252C0050EA60 /* JapanTravelRouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1FF22974252C0050EA60 /* JapanTravelRouletteTests.swift */; };
 		D49D1FFD2974252C0050EA60 /* JapanTravelRouletteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1FFC2974252C0050EA60 /* JapanTravelRouletteUITests.swift */; };
 		D49D1FFF2974252C0050EA60 /* JapanTravelRouletteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D1FFE2974252C0050EA60 /* JapanTravelRouletteUITestsLaunchTests.swift */; };
+		D49D200C297427450050EA60 /* RouletteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D200B297427450050EA60 /* RouletteScreen.swift */; };
+		D49D200E297427A10050EA60 /* TravelRecordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D200D297427A10050EA60 /* TravelRecordScreen.swift */; };
+		D49D20102974291A0050EA60 /* PrefectureNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D200F2974291A0050EA60 /* PrefectureNameView.swift */; };
+		D49D2012297429620050EA60 /* TravelRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D2011297429620050EA60 /* TravelRecordViewModel.swift */; };
+		D49D2014297429A40050EA60 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D2013297429A40050EA60 /* Prefecture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		D49D1FF82974252C0050EA60 /* JapanTravelRouletteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapanTravelRouletteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49D1FFC2974252C0050EA60 /* JapanTravelRouletteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanTravelRouletteUITests.swift; sourceTree = "<group>"; };
 		D49D1FFE2974252C0050EA60 /* JapanTravelRouletteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanTravelRouletteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D49D200B297427450050EA60 /* RouletteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteScreen.swift; sourceTree = "<group>"; };
+		D49D200D297427A10050EA60 /* TravelRecordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRecordScreen.swift; sourceTree = "<group>"; };
+		D49D200F2974291A0050EA60 /* PrefectureNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureNameView.swift; sourceTree = "<group>"; };
+		D49D2011297429620050EA60 /* TravelRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRecordViewModel.swift; sourceTree = "<group>"; };
+		D49D2013297429A40050EA60 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +104,15 @@
 		D49D1FE0297425290050EA60 /* JapanTravelRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				D49D2011297429620050EA60 /* TravelRecordViewModel.swift */,
+				D49D2013297429A40050EA60 /* Prefecture.swift */,
 				D49D1FE1297425290050EA60 /* JapanTravelRouletteApp.swift */,
 				D49D1FE3297425290050EA60 /* ContentView.swift */,
+				D49D200D297427A10050EA60 /* TravelRecordScreen.swift */,
+				D49D200F2974291A0050EA60 /* PrefectureNameView.swift */,
 				D49D1FE52974252C0050EA60 /* Assets.xcassets */,
 				D49D1FE72974252C0050EA60 /* Preview Content */,
+				D49D200B297427450050EA60 /* RouletteScreen.swift */,
 			);
 			path = JapanTravelRoulette;
 			sourceTree = "<group>";
@@ -257,7 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49D2014297429A40050EA60 /* Prefecture.swift in Sources */,
+				D49D200E297427A10050EA60 /* TravelRecordScreen.swift in Sources */,
+				D49D2012297429620050EA60 /* TravelRecordViewModel.swift in Sources */,
+				D49D200C297427450050EA60 /* RouletteScreen.swift in Sources */,
 				D49D1FE4297425290050EA60 /* ContentView.swift in Sources */,
+				D49D20102974291A0050EA60 /* PrefectureNameView.swift in Sources */,
 				D49D1FE2297425290050EA60 /* JapanTravelRouletteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
