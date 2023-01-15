@@ -17,7 +17,12 @@ struct RouletteScreen: View {
             }) {
                  Text("スタート")
             }
-            Text("ルーレットを回した結果")
+            if viewModel.isStoppedRoulette {
+                Text(viewModel.selectedPrefecture?.rawValue ?? "ルーレットを回してね")
+            } else {
+                LottieView(animationType: .oneTwoThree)
+                    .frame(width: 100, height: 100)
+            }
             HStack {
                 Image("")
                 Image("")

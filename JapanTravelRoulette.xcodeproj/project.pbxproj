@@ -20,6 +20,9 @@
 		D49D2012297429620050EA60 /* TravelRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D2011297429620050EA60 /* TravelRecordViewModel.swift */; };
 		D49D2014297429A40050EA60 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D2013297429A40050EA60 /* Prefecture.swift */; };
 		D49D20162974B6500050EA60 /* RouletteScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */; };
+		D49D20182974B6E90050EA60 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D20172974B6E90050EA60 /* LottieView.swift */; };
+		D49D201B2974B73C0050EA60 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D49D201A2974B73C0050EA60 /* Lottie */; };
+		D49D201D2974B77B0050EA60 /* three_two_one.json in Resources */ = {isa = PBXBuildFile; fileRef = D49D201C2974B77B0050EA60 /* three_two_one.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,8 @@
 		D49D2011297429620050EA60 /* TravelRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRecordViewModel.swift; sourceTree = "<group>"; };
 		D49D2013297429A40050EA60 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
 		D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteScreenViewModel.swift; sourceTree = "<group>"; };
+		D49D20172974B6E90050EA60 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		D49D201C2974B77B0050EA60 /* three_two_one.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = three_two_one.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49D201B2974B73C0050EA60 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +118,9 @@
 				D49D1FE3297425290050EA60 /* ContentView.swift */,
 				D49D200D297427A10050EA60 /* TravelRecordScreen.swift */,
 				D49D200B297427450050EA60 /* RouletteScreen.swift */,
+				D49D20172974B6E90050EA60 /* LottieView.swift */,
 				D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */,
+				D49D201C2974B77B0050EA60 /* three_two_one.json */,
 				D49D200F2974291A0050EA60 /* PrefectureNameView.swift */,
 				D49D1FE52974252C0050EA60 /* Assets.xcassets */,
 				D49D1FE72974252C0050EA60 /* Preview Content */,
@@ -161,6 +169,9 @@
 			dependencies = (
 			);
 			name = JapanTravelRoulette;
+			packageProductDependencies = (
+				D49D201A2974B73C0050EA60 /* Lottie */,
+			);
 			productName = JapanTravelRoulette;
 			productReference = D49D1FDE297425290050EA60 /* JapanTravelRoulette.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +244,9 @@
 				Base,
 			);
 			mainGroup = D49D1FD5297425290050EA60;
+			packageReferences = (
+				D49D20192974B73C0050EA60 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = D49D1FDF297425290050EA60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,6 +265,7 @@
 			files = (
 				D49D1FE92974252C0050EA60 /* Preview Assets.xcassets in Resources */,
 				D49D1FE62974252C0050EA60 /* Assets.xcassets in Resources */,
+				D49D201D2974B77B0050EA60 /* three_two_one.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +292,7 @@
 			files = (
 				D49D20162974B6500050EA60 /* RouletteScreenViewModel.swift in Sources */,
 				D49D2014297429A40050EA60 /* Prefecture.swift in Sources */,
+				D49D20182974B6E90050EA60 /* LottieView.swift in Sources */,
 				D49D200E297427A10050EA60 /* TravelRecordScreen.swift in Sources */,
 				D49D2012297429620050EA60 /* TravelRecordViewModel.swift in Sources */,
 				D49D200C297427450050EA60 /* RouletteScreen.swift in Sources */,
@@ -607,6 +623,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D49D20192974B73C0050EA60 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D49D201A2974B73C0050EA60 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D49D20192974B73C0050EA60 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D49D1FD6297425290050EA60 /* Project object */;
 }
