@@ -18,7 +18,13 @@ class RouletteScreenViewModel: ObservableObject {
     @Published var selectedPrefecture: Prefecture? = nil
 
     func startRoulette() {
+        rouletteStatus = .rolling
         // ランダムな数字を一つ選ぶ
-        // 3秒後に表示する
+        let selectedIndex = Int.random(in: 1..<48)
+        selectedPrefecture = Prefecture.allCases[safe: selectedIndex]
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.rouletteStatus = .endRolling
+        }
     }
 }

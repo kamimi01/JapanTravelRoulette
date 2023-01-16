@@ -23,6 +23,7 @@
 		D49D20182974B6E90050EA60 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D20172974B6E90050EA60 /* LottieView.swift */; };
 		D49D201B2974B73C0050EA60 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D49D201A2974B73C0050EA60 /* Lottie */; };
 		D49D201D2974B77B0050EA60 /* three_two_one.json in Resources */ = {isa = PBXBuildFile; fileRef = D49D201C2974B77B0050EA60 /* three_two_one.json */; };
+		D49D20202975FF860050EA60 /* Element+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D201F2975FF860050EA60 /* Element+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteScreenViewModel.swift; sourceTree = "<group>"; };
 		D49D20172974B6E90050EA60 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D49D201C2974B77B0050EA60 /* three_two_one.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = three_two_one.json; sourceTree = "<group>"; };
+		D49D201F2975FF860050EA60 /* Element+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		D49D1FE0297425290050EA60 /* JapanTravelRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				D49D201E2975FF740050EA60 /* Extension */,
 				D49D2011297429620050EA60 /* TravelRecordViewModel.swift */,
 				D49D2013297429A40050EA60 /* Prefecture.swift */,
 				D49D1FE1297425290050EA60 /* JapanTravelRouletteApp.swift */,
@@ -151,6 +154,14 @@
 				D49D1FFE2974252C0050EA60 /* JapanTravelRouletteUITestsLaunchTests.swift */,
 			);
 			path = JapanTravelRouletteUITests;
+			sourceTree = "<group>";
+		};
+		D49D201E2975FF740050EA60 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D49D201F2975FF860050EA60 /* Element+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 				D49D200C297427450050EA60 /* RouletteScreen.swift in Sources */,
 				D49D1FE4297425290050EA60 /* ContentView.swift in Sources */,
 				D49D20102974291A0050EA60 /* PrefectureNameView.swift in Sources */,
+				D49D20202975FF860050EA60 /* Element+Extension.swift in Sources */,
 				D49D1FE2297425290050EA60 /* JapanTravelRouletteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

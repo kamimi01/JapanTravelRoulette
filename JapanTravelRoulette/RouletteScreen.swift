@@ -22,7 +22,14 @@ struct RouletteScreen: View {
                 LottieView(animationType: .oneTwoThree)
                     .frame(width: 100, height: 100)
             case .endRolling:
-                Text("岩手県")
+                VStack(alignment: .center, spacing: 5) {
+                    Text(viewModel.selectedPrefecture?.rawValue ?? "なし")
+                        .font(.title)
+                    Text("\nにいこう！")
+                        .font(.title2)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 100)
             }
             HStack {
                 Image("")
@@ -35,7 +42,7 @@ struct RouletteScreen: View {
                     .font(.title)
                     .frame(width: 200, height: 200)
                     .imageScale(.large)
-                    .background(Color.pink)
+                    .background(Color.orange)
                     .foregroundColor(.white)
                     .clipShape(Circle())
                     .shadow(color: .gray, radius: 3, x: 5, y: 5)
