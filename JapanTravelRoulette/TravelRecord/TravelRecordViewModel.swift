@@ -12,6 +12,8 @@ enum ButtonStatus {
     case notSelected
 }
 
+let savedPrefectureKey = "prefectures"
+
 class TravelRecordViewModel: ObservableObject {
     @Published var prefectures = Prefecture.allCases
 
@@ -26,9 +28,25 @@ class TravelRecordViewModel: ObservableObject {
 
     private func saveSelectedPrefecture(prefecture: Prefecture) {
         print("保存をする", prefecture)
+        // 現在の値を取得する
+        guard var prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [Prefecture] else {
+            return
+        }
+        // 追加する
+        prefectures.append(prefecture)
+        // 保存する
+        UserDefaults.standard.set(prefectures, forKey: savedPrefectureKey)
     }
 
     private func deleteSelectedPrefecture(prefecture: Prefecture) {
         print("削除する", prefecture)
+        // 現在の値を取得する
+        guard var prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [Prefecture] else {
+            return
+        }
+        // 削除する
+        prefectures.removeAll(where: {$0.rawValue == prefecture.rawValue})
+        // 保存する
+        UserDefaults.standard.set(prefectures, forKey: savedPrefectureKey)
     }
 }
