@@ -114,17 +114,14 @@
 		D49D1FE0297425290050EA60 /* JapanTravelRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				D49D2022297603500050EA60 /* Roulette */,
+				D49D2021297603480050EA60 /* TravelRecord */,
 				D49D201E2975FF740050EA60 /* Extension */,
-				D49D2011297429620050EA60 /* TravelRecordViewModel.swift */,
 				D49D2013297429A40050EA60 /* Prefecture.swift */,
 				D49D1FE1297425290050EA60 /* JapanTravelRouletteApp.swift */,
 				D49D1FE3297425290050EA60 /* ContentView.swift */,
-				D49D200D297427A10050EA60 /* TravelRecordScreen.swift */,
-				D49D200B297427450050EA60 /* RouletteScreen.swift */,
 				D49D20172974B6E90050EA60 /* LottieView.swift */,
-				D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */,
 				D49D201C2974B77B0050EA60 /* three_two_one.json */,
-				D49D200F2974291A0050EA60 /* PrefectureNameView.swift */,
 				D49D1FE52974252C0050EA60 /* Assets.xcassets */,
 				D49D1FE72974252C0050EA60 /* Preview Content */,
 			);
@@ -162,6 +159,25 @@
 				D49D201F2975FF860050EA60 /* Element+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D49D2021297603480050EA60 /* TravelRecord */ = {
+			isa = PBXGroup;
+			children = (
+				D49D200D297427A10050EA60 /* TravelRecordScreen.swift */,
+				D49D2011297429620050EA60 /* TravelRecordViewModel.swift */,
+				D49D200F2974291A0050EA60 /* PrefectureNameView.swift */,
+			);
+			path = TravelRecord;
+			sourceTree = "<group>";
+		};
+		D49D2022297603500050EA60 /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
+				D49D200B297427450050EA60 /* RouletteScreen.swift */,
+				D49D20152974B6500050EA60 /* RouletteScreenViewModel.swift */,
+			);
+			path = Roulette;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
