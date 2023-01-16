@@ -19,12 +19,20 @@ class RouletteScreenViewModel: ObservableObject {
 
     func startRoulette() {
         rouletteStatus = .rolling
-        // ランダムな数字を一つ選ぶ
-        let selectedIndex = Int.random(in: 1..<48)
-        selectedPrefecture = Prefecture.allCases[safe: selectedIndex]
-
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.rouletteStatus = .endRolling
         }
+        
+        // 行ったことがない都道府県を取得する
+        guard let prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [Prefecture] else {
+            // 取得できなかったら全都道府県からランダムで選択する
+            let selectedIndex = Int.random(in: 1..<48)
+            selectedPrefecture = Prefecture.allCases[safe: selectedIndex]
+            return
+        }
+        let numOfPrefectures = prefectures.count
+        // 行ったことのない都道府県からランダムで選択する
+        let selectedIndex = Int.random(in: 1..<numOfPrefectures + 1)
+        selectedPrefecture = prefectures[safe: selectedIndex]
     }
 }
