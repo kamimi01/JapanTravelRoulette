@@ -29,11 +29,13 @@ class TravelRecordViewModel: ObservableObject {
     private func saveSelectedPrefecture(prefecture: Prefecture) {
         print("保存をする", prefecture)
         // 現在の値を取得する
-        guard var prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [Prefecture] else {
+        guard var prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [String] else {
+            // 新しく追加する
+            UserDefaults.standard.set([prefecture.rawValue], forKey: savedPrefectureKey)
             return
         }
         // 追加する
-        prefectures.append(prefecture)
+        prefectures.append(prefecture.rawValue)
         // 保存する
         UserDefaults.standard.set(prefectures, forKey: savedPrefectureKey)
     }
@@ -41,11 +43,11 @@ class TravelRecordViewModel: ObservableObject {
     private func deleteSelectedPrefecture(prefecture: Prefecture) {
         print("削除する", prefecture)
         // 現在の値を取得する
-        guard var prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [Prefecture] else {
+        guard var prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [String] else {
             return
         }
         // 削除する
-        prefectures.removeAll(where: {$0.rawValue == prefecture.rawValue})
+        prefectures.removeAll(where: {$0 == prefecture.rawValue})
         // 保存する
         UserDefaults.standard.set(prefectures, forKey: savedPrefectureKey)
     }
