@@ -16,13 +16,13 @@ struct TravelRecordScreen: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
                         ForEach(viewModel.prefectures) { prefecture in
-                            PrefectureNameView(prefecture: prefecture)
+                            PrefectureNameView(viewModel: viewModel, prefecture: prefecture)
                                 .padding(.horizontal, 16)
                         }
                     }
                 }
             }
-            .navigationTitle("行ったことのある都道府県はどこ？")
+            .navigationTitle("どの都道府県に行った？")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

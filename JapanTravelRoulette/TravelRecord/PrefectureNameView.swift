@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PrefectureNameView: View {
+    @ObservedObject var viewModel: TravelRecordViewModel
     let prefecture: Prefecture
     @State private var isButtonTapped = false
 
@@ -15,6 +16,11 @@ struct PrefectureNameView: View {
         HStack(alignment: .center, spacing: 20) {
             Button(action: {
                 isButtonTapped.toggle()
+                if isButtonTapped {
+                    viewModel.didTapButton(buttonStatus: .selected)
+                } else {
+                    viewModel.didTapButton(buttonStatus: .notSelected)
+                }
             }) {
                 if isButtonTapped {
                     Image(systemName: "checkmark.circle.fill")
@@ -37,6 +43,6 @@ struct PrefectureNameView: View {
 
 struct PrefectureNameView_Previews: PreviewProvider {
     static var previews: some View {
-        PrefectureNameView(prefecture: Prefecture.iwate)
+        PrefectureNameView(viewModel: TravelRecordViewModel(), prefecture: Prefecture.iwate)
     }
 }
