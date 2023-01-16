@@ -15,20 +15,20 @@ enum ButtonStatus {
 class TravelRecordViewModel: ObservableObject {
     @Published var prefectures = Prefecture.allCases
 
-    func didTapButton(buttonStatus: ButtonStatus) {
+    func didTapButton(buttonStatus: ButtonStatus, prefecture: Prefecture) {
         switch buttonStatus {
         case .selected:
-            saveSelectedPrefecture()
+            saveSelectedPrefecture(prefecture: prefecture)
         case .notSelected:
-            deleteSelectedPrefecture()
+            deleteSelectedPrefecture(prefecture: prefecture)
         }
     }
 
-    private func saveSelectedPrefecture() {
-        print("保存をする")
+    private func saveSelectedPrefecture(prefecture: Prefecture) {
+        print("保存をする", prefecture)
     }
 
-    private func deleteSelectedPrefecture() {
-        print("削除する")
+    private func deleteSelectedPrefecture(prefecture: Prefecture) {
+        print("削除する", prefecture)
     }
 }

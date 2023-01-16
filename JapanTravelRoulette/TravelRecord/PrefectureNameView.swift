@@ -17,9 +17,9 @@ struct PrefectureNameView: View {
             Button(action: {
                 isButtonTapped.toggle()
                 if isButtonTapped {
-                    viewModel.didTapButton(buttonStatus: .selected)
+                    viewModel.didTapButton(buttonStatus: .selected, prefecture: prefecture)
                 } else {
-                    viewModel.didTapButton(buttonStatus: .notSelected)
+                    viewModel.didTapButton(buttonStatus: .notSelected, prefecture: prefecture)
                 }
             }) {
                 if isButtonTapped {
