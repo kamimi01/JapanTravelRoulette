@@ -23,16 +23,33 @@ class RouletteScreenViewModel: ObservableObject {
             self.rouletteStatus = .endRolling
         }
         
-        // 行ったことがない都道府県を取得する
-        guard let prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [Prefecture] else {
+        // 行ったことがある都道府県を取得する
+        guard let prefectureNames = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [String] else {
             // 取得できなかったら全都道府県からランダムで選択する
             let selectedIndex = Int.random(in: 1..<48)
             selectedPrefecture = Prefecture.allCases[safe: selectedIndex]
             return
         }
-        let numOfPrefectures = prefectures.count
+        let prefectures: [Prefecture] = prefectureNames.map { prefectureName in
+            Prefecture.allCases.filter { $0.rawValue == prefectureName }.first!
+        }
+        // 行ったことのない都道府県を取得
+        var wannaGoPrefectures: [Prefecture] {
+            var result = [Prefecture]()
+            for prefecture in Prefecture.allCases {
+                // 全ての都道府県をチェックして、行ったことのある都道府県が含まれていなかったら、appendする
+                if !prefectures.contains(prefecture) {
+                    result.append(prefecture)
+                }
+            }
+            return result
+        }
+        let numOfPrefectures = wannaGoPrefectures.count
         // 行ったことのない都道府県からランダムで選択する
         let selectedIndex = Int.random(in: 1..<numOfPrefectures + 1)
-        selectedPrefecture = prefectures[safe: selectedIndex]
+        guard let prefecture = wannaGoPrefectures[safe: selectedIndex] else {
+            return
+        }
+        selectedPrefecture = prefecture
     }
 }
