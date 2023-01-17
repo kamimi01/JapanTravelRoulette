@@ -24,10 +24,15 @@ struct RouletteScreen: View {
                         .frame(width: 100, height: 100)
                 case .endRolling:
                     VStack(alignment: .center, spacing: 5) {
-                        Text(viewModel.selectedPrefecture?.rawValue ?? "なし")
-                            .font(.title)
-                        Text("\nにいこう！")
-                            .font(.title2)
+                        if let selectedPrefecture = viewModel.selectedPrefecture {
+                            Text(selectedPrefecture.rawValue)
+                                .font(.title)
+                            Text("\nにいこう！")
+                                .font(.title2)
+                        } else {
+                            Text("全部行ったね！すごい！🎉")
+                                .font(.title)
+                        }
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: 100)

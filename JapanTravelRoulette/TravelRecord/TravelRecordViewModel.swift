@@ -38,6 +38,7 @@ class TravelRecordViewModel: ObservableObject {
         prefectures.append(prefecture.rawValue)
         // 保存する
         UserDefaults.standard.set(prefectures, forKey: savedPrefectureKey)
+        print("保存時のprefectures:", prefectures)
     }
 
     private func deleteSelectedPrefecture(prefecture: Prefecture) {
@@ -50,6 +51,7 @@ class TravelRecordViewModel: ObservableObject {
         prefectures.removeAll(where: {$0 == prefecture.rawValue})
         // 保存する
         UserDefaults.standard.set(prefectures, forKey: savedPrefectureKey)
+        print("削除時のprefectures:", prefectures)
     }
 
     func isSavedPrefecture(prefecture: Prefecture) -> Bool {

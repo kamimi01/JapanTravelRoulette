@@ -45,6 +45,10 @@ class RouletteScreenViewModel: ObservableObject {
             return result
         }
         let numOfPrefectures = wannaGoPrefectures.count
+        if numOfPrefectures == 0 {
+            selectedPrefecture = nil
+            return
+        }
         // 行ったことのない都道府県からランダムで選択する
         let selectedIndex = Int.random(in: 1..<numOfPrefectures + 1)
         guard let prefecture = wannaGoPrefectures[safe: selectedIndex] else {
