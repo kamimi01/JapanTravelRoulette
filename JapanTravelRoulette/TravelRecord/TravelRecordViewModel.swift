@@ -51,4 +51,16 @@ class TravelRecordViewModel: ObservableObject {
         // 保存する
         UserDefaults.standard.set(prefectures, forKey: savedPrefectureKey)
     }
+
+    func isSavedPrefecture(prefecture: Prefecture) -> Bool {
+        // 現在の値を取得する
+        guard let prefectures = UserDefaults.standard.array(forKey: savedPrefectureKey) as? [String] else {
+            return false
+        }
+        if prefectures.contains(prefecture.rawValue) {
+            return true
+        } else {
+            return false
+        }
+    }
 }

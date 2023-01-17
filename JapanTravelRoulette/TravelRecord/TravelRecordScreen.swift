@@ -16,7 +16,11 @@ struct TravelRecordScreen: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
                         ForEach(viewModel.prefectures) { prefecture in
-                            PrefectureNameView(viewModel: viewModel, prefecture: prefecture)
+                            PrefectureNameView(
+                                viewModel: viewModel,
+                                prefecture: prefecture,
+                                isButtonTapped: viewModel.isSavedPrefecture(prefecture: prefecture)
+                            )
                                 .padding(.horizontal, 16)
                         }
                     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct PrefectureNameView: View {
     @ObservedObject var viewModel: TravelRecordViewModel
     let prefecture: Prefecture
-    @State private var isButtonTapped = false
+    @State var isButtonTapped: Bool
 
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
@@ -43,6 +43,6 @@ struct PrefectureNameView: View {
 
 struct PrefectureNameView_Previews: PreviewProvider {
     static var previews: some View {
-        PrefectureNameView(viewModel: TravelRecordViewModel(), prefecture: Prefecture.iwate)
+        PrefectureNameView(viewModel: TravelRecordViewModel(), prefecture: Prefecture.iwate, isButtonTapped: true)
     }
 }
